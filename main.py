@@ -40,6 +40,12 @@ def main():
                 print("Game over!")
                 return
 
+        for obj in asteroids:
+            for obj2 in shots:
+                if obj.check_collision(obj2):
+                    obj2.kill()
+                    obj.kill()
+
 
         screen.fill("black")
 
